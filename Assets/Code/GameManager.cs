@@ -12,15 +12,28 @@ public class GameManager : MonoBehaviour {
 	void Start () {
         ScoreText.text = Score.ToString();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     public void TickUpScore()
     {
         Score++;
         ScoreText.text = Score.ToString();
+    }
+
+    public void CheckForWin()
+    {
+        IsWinScoreAchieved();
+    }
+
+    public bool IsWinScoreAchieved()
+    {
+        if (Score >= 1)
+        {
+            ScoreText.text = "Won!";
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
