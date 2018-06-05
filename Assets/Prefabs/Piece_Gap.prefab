@@ -192,6 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 1
+  PhysicsBased: 0
 --- !u!114 &114788633655285000
 MonoBehaviour:
   m_ObjectHideFlags: 1

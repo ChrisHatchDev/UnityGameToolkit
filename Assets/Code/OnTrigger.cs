@@ -14,28 +14,40 @@ public class OnTrigger : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject == gameObject || other.gameObject == gameObject.transform.parent)
+            return;
+        
         if (!_triggered)
         {
             Enter.Invoke();
-            _triggered = true;
+            if(OneTime)
+                _triggered = true;
         }
     }
 
     private void OnTriggerStay(Collider other)
     {
+        if (other.gameObject == gameObject || other.gameObject == gameObject.transform.parent)
+            return;
+        
         if (!_triggered)
         {
             Stay.Invoke();
-            _triggered = true;
+            if (OneTime)
+                _triggered = true;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
+        if (other.gameObject == gameObject || other.gameObject == gameObject.transform.parent)
+            return;
+        
         if (!_triggered)
         {
             Exit.Invoke();
-            _triggered = true;
+            if (OneTime)
+                _triggered = true;
         }
     }
 

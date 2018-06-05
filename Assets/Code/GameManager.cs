@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
-    public float Score;
+    public float Score = 0;
     public Text ScoreText;
 
 	// Use this for initialization
@@ -19,21 +19,26 @@ public class GameManager : MonoBehaviour {
         ScoreText.text = Score.ToString();
     }
 
-    public void CheckForWin()
+    public void CheckForWin(int scoreToWin)
     {
-        IsWinScoreAchieved();
+        IsWinScoreAchieved(scoreToWin);
     }
 
-    public bool IsWinScoreAchieved()
+    public bool IsWinScoreAchieved(int scoreToWin)
     {
-        if (Score >= 1)
+        if (Score >= scoreToWin)
         {
-            ScoreText.text = "Won!";
             return true;
         }
         else
         {
             return false;
         }
+    }
+
+    public void WinGame (){
+
+        ScoreText.text = "You Won!";
+
     }
 }
