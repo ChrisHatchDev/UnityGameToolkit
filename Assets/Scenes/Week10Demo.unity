@@ -88,7 +88,6 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
-    m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -126,8 +125,8 @@ GameObject:
   - component: {fileID: 185540764}
   - component: {fileID: 185540768}
   m_Layer: 0
-  m_Name: Sphere
-  m_TagString: Untagged
+  m_Name: PlayerBoi
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -394,6 +393,12 @@ Prefab:
       propertyPath: SpawnOffsets.Array.data[2].x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114465404461749340, guid: 23072b7823432684cb712a4c78b887af,
+        type: 2}
+      propertyPath: PrefabsToSpawn.Array.data[1]
+      value: 
+      objectReference: {fileID: 1173008743000892, guid: e33539cdee1db5a4ebaf17d720a97ee8,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 23072b7823432684cb712a4c78b887af, type: 2}
   m_IsPrefabParent: 0
@@ -484,7 +489,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1547798716}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5244b5a316039f4dbff2d42aad06bd6, type: 3}
   m_Name: 
