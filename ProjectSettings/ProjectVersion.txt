@@ -1,6 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 m_EditorVersion: 2017.2.3f1
+=======
+m_EditorVersion: 2017.2.0f3
+>>>>>>> parent of baa35f1... Toolkit Updates, Endless Runner Updates
 =======
 m_EditorVersion: 2017.2.0f3
 >>>>>>> parent of baa35f1... Toolkit Updates, Endless Runner Updates
