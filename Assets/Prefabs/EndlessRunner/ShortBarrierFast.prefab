@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 54776293700179560}
   m_Layer: 0
   m_Name: ShortBarrierFast
-  m_TagString: Untagged
+  m_TagString: Bad
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PhysicsBased: 0
-  MoveSpeed: {x: 0, y: 0, z: -8}
+  Force: {x: 0, y: 0, z: -4}
 --- !u!114 &114620189185073338
 MonoBehaviour:
   m_ObjectHideFlags: 1

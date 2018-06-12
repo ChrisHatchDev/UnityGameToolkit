@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 65299390762010000}
   m_Layer: 0
   m_Name: PickupPrototype01x01x01
-  m_TagString: Untagged
+  m_TagString: Good
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,7 +40,7 @@ Transform:
   m_GameObject: {fileID: 1825132804338746}
   m_LocalRotation: {x: 0.00000008146034, y: 0, z: -0, w: 1}
   m_LocalPosition: {x: 2.5374038, y: 2.34, z: -11.722487}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PhysicsBased: 0
-  MoveSpeed: {x: 0, y: 0, z: -8}
+  Force: {x: 0, y: 0, z: -4}
 --- !u!114 &114468335913253452
 MonoBehaviour:
   m_ObjectHideFlags: 1

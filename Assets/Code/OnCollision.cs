@@ -11,16 +11,26 @@ public class OnCollision : MonoBehaviour {
     public UnityEvent Enter;
     public UnityEvent Stay;
     public UnityEvent Exit;
+    public UnityEvent EnterGood;
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (!_triggered)
+        if (!_triggered && collision.gameObject.tag == "Bad")
         {
             Enter.Invoke();
             if(OneTime)
                 _triggered = true;
         }
+
+        else if (!_triggered && collision.gameObject.tag == "Good")
+        {
+            EnterGood.Invoke();
+            if (OneTime)
+                _triggered = true;
+        }
     }
+
+  
 
     private void OnCollisionStay(Collision collision)
     {

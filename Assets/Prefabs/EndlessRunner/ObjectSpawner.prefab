@@ -34,7 +34,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1471911141379828}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.0892591, y: 1.9431129, z: 12.34}
+  m_LocalPosition: {x: 0, y: 0.35, z: 11.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -51,10 +51,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a5169a92bb0ad24890ebd0001e01cad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrefabToSpawn: {fileID: 1173008743000892, guid: e33539cdee1db5a4ebaf17d720a97ee8,
-    type: 2}
+  PrefabToSpawn: {fileID: 0}
   PrefabsToSpawn:
   - {fileID: 1173008743000892, guid: dee9d3102322b244eb48ab45d77d87cb, type: 2}
   - {fileID: 1825132804338746, guid: dbd02ed15d639d049a938cffbc7e25ad, type: 2}
-  SpawnOffsets: []
-  SpawnDelay: 0.1
+  - {fileID: 1173008743000892, guid: dee9d3102322b244eb48ab45d77d87cb, type: 2}
+  - {fileID: 1173008743000892, guid: dee9d3102322b244eb48ab45d77d87cb, type: 2}
+  - {fileID: 1173008743000892, guid: dee9d3102322b244eb48ab45d77d87cb, type: 2}
+  - {fileID: 1173008743000892, guid: dee9d3102322b244eb48ab45d77d87cb, type: 2}
+  - {fileID: 1173008743000892, guid: dee9d3102322b244eb48ab45d77d87cb, type: 2}
+  SpawnOffsets:
+  - {x: -1, y: 0, z: 0}
+  - {x: 1, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  SpawnDelay: 0.75

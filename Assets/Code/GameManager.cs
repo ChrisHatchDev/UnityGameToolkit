@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
-    public float Score = 0;
+    public float Score = 0f;
     public Text ScoreText;
 
     public bool UseTimeAsScore;
@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour {
         if (CheckForWinOnUpdate)
         {
             CheckPlayerHealth();
+            CheckForWin(1500f);
         }
 
         /* Touch Support
@@ -46,7 +47,7 @@ public class GameManager : MonoBehaviour {
         }
         */
 
-        if (Input.GetKeyDown(KeyCode.R) && GameHasEnded)
+        if (Input.GetKeyDown(KeyCode.Space) && GameHasEnded)
         {
             Time.timeScale = 1;
             SceneManager.LoadScene(0);
@@ -59,7 +60,7 @@ public class GameManager : MonoBehaviour {
         ScoreText.text = Score.ToString();
     }
 
-    public void CheckForWin(int scoreToWin)
+    public void CheckForWin(float scoreToWin)
     {
         IsWinScoreAchieved(scoreToWin);
     }
@@ -69,18 +70,17 @@ public class GameManager : MonoBehaviour {
         if(PlayerControl.Health <= 0)
         {
             PlayerControl.HealthText.gameObject.SetActive(false);
-            ScoreText.text = "Game Over";
+            ScoreText.text = "Game Over. Your score was " + Score.ToString("000") + ". Press space to try again.";
             Time.timeScale = 0;
             GameHasEnded = true;
         }
     }
 
-    public bool IsWinScoreAchieved(int scoreToWin)
+    public bool IsWinScoreAchieved(float scoreToWin)
     {
         if (Score >= scoreToWin)
         {
             WinGame();
-            GameHasEnded = true;
             return true;
         }
         else
@@ -91,7 +91,10 @@ public class GameManager : MonoBehaviour {
 
     public void WinGame (){
 
-        ScoreText.text = "You Won!";
+        PlayerControl.HealthText.gameObject.SetActive(false);
+        ScoreText.text = "You Won! Press space to play again.";
+        Time.timeScale = 0;
+        GameHasEnded = true;
 
     }
 }

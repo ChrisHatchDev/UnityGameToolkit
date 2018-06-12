@@ -9,7 +9,7 @@ public class MoveObjectOverTime : MonoBehaviour {
     private Rigidbody _rigid;
 
     [Tooltip("You can define the direction using this Vector 3")]
-    public Vector3 MoveSpeed;
+    public Vector3 Force;
 
 	void Start () {
         if(PhysicsBased)
@@ -17,14 +17,15 @@ public class MoveObjectOverTime : MonoBehaviour {
 	}
 	
 	void Update () {
+        
 
         if (PhysicsBased)
         {
-            _rigid.position += MoveSpeed * Time.deltaTime;
+            _rigid.position += Force * Time.deltaTime;
         }
         else
         {
-            transform.position += MoveSpeed * Time.deltaTime;
+            transform.position += Force * Time.deltaTime;
         }
 	}
 }

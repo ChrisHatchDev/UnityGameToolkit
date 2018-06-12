@@ -10,10 +10,11 @@ public class PlayerController : MonoBehaviour {
 
     public int Health = 3;
     public Text HealthText;
+    
 
     // Use this for initialization
     void Start () {
-		
+       
 	}
 	
 	// Update is called once per frame
@@ -44,6 +45,8 @@ public class PlayerController : MonoBehaviour {
 
     }
 
+
+
     void MoveRight()
     {
         int _movesToTheRight = (int)(transform.position.x / 1.1f);
@@ -58,6 +61,15 @@ public class PlayerController : MonoBehaviour {
         if(Health > 0)
         {
             Health--;
+        }
+
+    }
+
+    public void PickUpHealth()
+    {
+        if(Health > 0 && Health < 10)
+        {
+            Health++;
         }
 
     }
