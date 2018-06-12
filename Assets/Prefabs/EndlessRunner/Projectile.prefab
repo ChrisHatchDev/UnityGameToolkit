@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 23730139511325894}
   - component: {fileID: 114000444889082252}
   - component: {fileID: 114423398644021006}
+  - component: {fileID: 114163229026151818}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -98,6 +99,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PhysicsBased: 0
   MoveSpeed: {x: 0, y: 0, z: 16}
+--- !u!114 &114163229026151818
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1860075748269834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60514df4782e80446998e7f4a3f699eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyDelay: 15
 --- !u!114 &114423398644021006
 MonoBehaviour:
   m_ObjectHideFlags: 1

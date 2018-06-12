@@ -79,6 +79,7 @@ public class PlayerController : MonoBehaviour {
         if (collision.gameObject.tag == "Ammo" && AmmoCount < 3)
         {
             AmmoCount++;
+            Destroy(collision.gameObject);
         }
     }
 
