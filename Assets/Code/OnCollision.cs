@@ -14,7 +14,7 @@ public class OnCollision : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (!_triggered)
+        if (!_triggered && collision.gameObject.tag == "Damage")
         {
             Enter.Invoke();
             if(OneTime)

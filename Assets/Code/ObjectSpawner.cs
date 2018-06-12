@@ -6,14 +6,13 @@ public class ObjectSpawner : MonoBehaviour {
 
     public GameObject PrefabToSpawn;
     public List<GameObject> PrefabsToSpawn = new List<GameObject>();
-
     public List<Vector3> SpawnOffsets = new List<Vector3>();
-
     public float SpawnDelay = 0.1f;
 
     private void Start()
     {
         StartCoroutine(WaitToSpawn());
+        StartCoroutine(SpawnTimeProgression());
     }
 
     IEnumerator WaitToSpawn()
@@ -23,6 +22,20 @@ public class ObjectSpawner : MonoBehaviour {
         yield return new WaitForSeconds(SpawnDelay);
 
         StartCoroutine(WaitToSpawn());
+    }
+
+    IEnumerator SpawnTimeProgression()
+    {
+        yield return new WaitForSeconds(5);
+
+        //Debug.Log(SpawnDelay);
+       
+        SpawnDelay -= .025f;
+
+        if (SpawnDelay > .025f)
+        {
+            StartCoroutine(SpawnTimeProgression());
+        }
     }
 
 
