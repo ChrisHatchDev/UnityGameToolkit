@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114620189185073338}
   - component: {fileID: 114568073382325704}
   m_Layer: 0
-  m_Name: ShortBarrierFast
+  m_Name: LowerBarrierFast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1173008743000892}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.065861, y: 2.5062729e-17, z: -1.128725}
-  m_LocalScale: {x: 0.85143733, y: 1, z: 0.21893312}
+  m_LocalPosition: {x: 0, y: 0.51, z: 1.64}
+  m_LocalScale: {x: 2.0673025, y: 1, z: 0.21893312}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

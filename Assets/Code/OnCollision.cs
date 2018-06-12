@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class OnCollision : MonoBehaviour {
 
     public bool OneTime;
-    private bool _triggered = false;
+    private bool _triggered;
 
     public UnityEvent Enter;
     public UnityEvent Stay;
@@ -17,8 +17,7 @@ public class OnCollision : MonoBehaviour {
         if (!_triggered)
         {
             Enter.Invoke();
-            if(OneTime)
-                _triggered = true;
+            _triggered = true;
         }
     }
 
@@ -27,8 +26,7 @@ public class OnCollision : MonoBehaviour {
         if (!_triggered)
         {
             Stay.Invoke();
-            if (OneTime)
-                _triggered = true;
+            _triggered = true;
         }
     }
 
@@ -37,8 +35,7 @@ public class OnCollision : MonoBehaviour {
         if (!_triggered)
         {
             Exit.Invoke();
-            if (OneTime)
-                _triggered = true;
+            _triggered = true;
         }
     }
 }

@@ -51,11 +51,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a5169a92bb0ad24890ebd0001e01cad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrefabToSpawn: {fileID: 1976875912396272, guid: cb2f65dc0ed8b284a9f5348ca82d7d4e,
+  PrefabToSpawn: {fileID: 1173008743000892, guid: e33539cdee1db5a4ebaf17d720a97ee8,
     type: 2}
   PrefabsToSpawn: []
-  SpawnOffsets: []
+  SideToSpawn: 0
+  SpawnLeftSide: 0
+  LeftOffset: {x: 0, y: 0, z: 0}
+  SpawnRightSide: 0
+  RightOffset: {x: 0, y: 0, z: 0}
+  SpawnCenter: 0
   SpawnDelay: 0.1
-  ShouldSpeedUpOverTime: 0
-  SpeedUpEveryNSeconds: 30
-  PercentageToSpeedUp: 0.5
