@@ -13,7 +13,7 @@ public class ObjectSpawner : MonoBehaviour {
 
     public bool ShouldSpeedUpOverTime;
     public float SpeedUpEveryNSeconds = 30;
-    public float PercentageToSpeedUp = 0.5f;
+    public float PercentageToSpeedUp = 1f;
 
     private void Start()
     {
