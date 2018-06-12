@@ -53,11 +53,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PrefabToSpawn: {fileID: 1173008743000892, guid: e33539cdee1db5a4ebaf17d720a97ee8,
     type: 2}
-  PrefabsToSpawn: []
-  SideToSpawn: 0
-  SpawnLeftSide: 0
-  LeftOffset: {x: 0, y: 0, z: 0}
-  SpawnRightSide: 0
-  RightOffset: {x: 0, y: 0, z: 0}
-  SpawnCenter: 0
+  PrefabsToSpawn:
+  - {fileID: 1173008743000892, guid: dee9d3102322b244eb48ab45d77d87cb, type: 2}
+  - {fileID: 1825132804338746, guid: dbd02ed15d639d049a938cffbc7e25ad, type: 2}
+  SpawnOffsets: []
   SpawnDelay: 0.1
