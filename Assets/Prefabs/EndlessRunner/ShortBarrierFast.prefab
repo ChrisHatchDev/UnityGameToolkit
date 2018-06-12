@@ -58,6 +58,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -125,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PhysicsBased: 0
-  MoveSpeed: {x: 0, y: 0, z: -8}
+  MoveSpeed: {x: 0, y: 0, z: 8}
 --- !u!114 &114620189185073338
 MonoBehaviour:
   m_ObjectHideFlags: 1

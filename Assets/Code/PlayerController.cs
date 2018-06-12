@@ -64,8 +64,8 @@ public class PlayerController : MonoBehaviour {
         int _movesToTheLeft = (int)(transform.position.x / 1.1f);
         //Debug.Log("Moves to the left =" + _movesToTheLeft);
 
-        if(_movesToTheLeft > -NumberOfLanes/3)
-            transform.position -= new Vector3(LaneWidth, 0, 0);
+        if(_movesToTheLeft < NumberOfLanes/3)
+            transform.position += new Vector3(LaneWidth, 0, 0);
 
     }
 
@@ -74,8 +74,8 @@ public class PlayerController : MonoBehaviour {
         int _movesToTheRight = (int)(transform.position.x / 1.1f);
         //Debug.Log("Moves to the Right =" + _movesToTheRight);
 
-        if (_movesToTheRight < NumberOfLanes/3)
-            transform.position += new Vector3(LaneWidth, 0, 0);
+        if (_movesToTheRight > -NumberOfLanes/3)
+            transform.position -= new Vector3(LaneWidth, 0, 0);
     }
 
     public void GotHit()
