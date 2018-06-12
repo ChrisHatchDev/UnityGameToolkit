@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class coinGet : MonoBehaviour {
+
     public GameManager Game_Manager;
 
     private void OnTriggerEnter(Collider other)
