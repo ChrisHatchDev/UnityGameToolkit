@@ -24,6 +24,10 @@ public class OnCollision : MonoBehaviour {
         {
             Destroy(this.gameObject);
         }
+        if (collision.gameObject.name == "Bullet")
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionStay(Collision collision)
