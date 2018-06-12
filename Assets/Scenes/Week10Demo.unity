@@ -546,7 +546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LaneWidth: 1.1
   NumberOfLanes: 3
-  Manager: {fileID: 1547798717}
+  Manager: {fileID: 0}
   Health: 3
   HealthText: {fileID: 1828526552}
   Invincible: 0
@@ -809,7 +809,7 @@ MonoBehaviour:
   HealthText: {fileID: 1828526552}
   Invincible: 0
   InvincibleTime: 0
-  anim: {fileID: 0}
+  anim: {fileID: 332518273}
   Big: {x: 0, y: 0, z: 0}
   Small: {x: 0, y: 0, z: 0}
 --- !u!114 &332518276
@@ -889,7 +889,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 332518272}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9e57cb77a855c914fa87df6c989e912a, type: 3}
@@ -2687,7 +2687,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 000
 --- !u!222 &1185902317
 CanvasRenderer:
   m_ObjectHideFlags: 0

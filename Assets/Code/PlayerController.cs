@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour {
     void Start () {
         InvincibleTime = 7;
         anim = GetComponent<Animator>();
+        AudioSource audio = GetComponent<AudioSource>();
+        
     }
 	
 	// Update is called once per frame
