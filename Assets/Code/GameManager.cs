@@ -91,7 +91,7 @@ public class GameManager : MonoBehaviour {
 
     public void WinGame (){
 
-        ScoreText.text = "You Won!";
+        ScoreText.text = "Nice";
 
     }
 }
