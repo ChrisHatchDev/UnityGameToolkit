@@ -8,6 +8,3 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Yasemin.unity
     guid: a464304afd7e9a741837377e78caa345
-  - enabled: 0
-    path: Assets/Scenes/Week10Demo.unity
-    guid: 5ad9880a9cc6fba428043cf4fc7e74e2
