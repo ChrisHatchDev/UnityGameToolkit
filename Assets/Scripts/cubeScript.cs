@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class cubeScript : MonoBehaviour {
     public Material BaseMat, Black, White;
     public string ColorTag, PlayerTagREF, GameState;
-    public Text OpisitesText;
-
+    public Text OpisitesText, ScoreDude, Strikes;
+    public int score, strikes;
 
 	// Use this for initialization
 	void Start () {
@@ -21,13 +21,15 @@ public class cubeScript : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
-
+        ScoreDude.text = score.ToString();
+        Strikes.text = strikes.ToString();
 
         if (GameState == "Alike" && Input.GetKeyDown("space"))
         {
             if (PlayerTagREF == ColorTag || PlayerTagREF == "Default")
             {
                 Debug.Log("Nice !");
+                score++;
                 PlayerTagREF = ColorTag;
             }
             else
@@ -35,7 +37,7 @@ public class cubeScript : MonoBehaviour {
 
                 Debug.Log("Too Bad");
                 PlayerTagREF = ColorTag;
-
+                strikes++;
             }
 
 
@@ -49,12 +51,14 @@ public class cubeScript : MonoBehaviour {
             {
                 Debug.Log("Nice !");
                 PlayerTagREF = ColorTag;
+                score++;
 
             }
             else
             {
                 Debug.Log("Too Bad");
                 PlayerTagREF = ColorTag;
+                strikes++;
 
             }
 
