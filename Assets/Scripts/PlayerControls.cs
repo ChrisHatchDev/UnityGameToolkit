@@ -8,12 +8,14 @@ public class PlayerControls : MonoBehaviour {
     bool isRight = false;
     Animator Anim, LeftAnim, RightAnim;
     public Material CurrentMat, ColorReference;
-    public string PlayerTag = "Default";
+    public string PlayerTag = "Default", ColorTagREF;
 
 
 	// Use this for initialization
 	void Start ()
     {
+        ColorTagREF = GameObject.Find("ColorCube").GetComponent<cubeScript>().ColorTag;
+
         CurrentMat.color = ColorReference.color;
         Anim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
         if (Anim = null)
