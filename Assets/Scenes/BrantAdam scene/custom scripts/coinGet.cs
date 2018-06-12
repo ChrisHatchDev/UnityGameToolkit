@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class coinGet : MonoBehaviour {
-    private GameObject Game_Manager;
+    public GameManager Game_Manager;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -11,8 +11,7 @@ public class coinGet : MonoBehaviour {
         {
             //GameObject.GetComponent<collisionRevision>.TickUpScore();
 
-
-
+            Game_Manager.TickUpScore();
 
 
 
@@ -24,7 +23,7 @@ public class coinGet : MonoBehaviour {
 
 
 
-            Game_Manager.GameManager.TickUpScore();
+            //Game_Manager.GameManager.TickUpScore();
             Destroy(other.gameObject);
         }
     }
