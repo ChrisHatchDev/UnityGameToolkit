@@ -18,19 +18,14 @@ public class ObjectSpawner : MonoBehaviour {
     IEnumerator WaitToSpawn()
     {
         SpawnObject();
-
         yield return new WaitForSeconds(SpawnDelay);
-
         StartCoroutine(WaitToSpawn());
     }
 
     IEnumerator SpawnTimeProgression()
     {
         yield return new WaitForSeconds(5);
-
-        //Debug.Log(SpawnDelay);
-       
-        SpawnDelay -= .025f;
+        SpawnDelay -= .05f;
 
         if (SpawnDelay > .025f)
         {
