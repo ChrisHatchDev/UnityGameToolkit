@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour {
 
     public bool UseTimeAsScore;
     public float TimeSurvived;
+    public float PelletsEaten;
 
     public bool CheckForWinOnUpdate;
     public PlayerController PlayerControl;
@@ -27,7 +28,7 @@ public class GameManager : MonoBehaviour {
         if (UseTimeAsScore)
         {
             TimeSurvived += Time.deltaTime;
-            Score = TimeSurvived * 10;
+            Score = (TimeSurvived * 2) + PelletsEaten;
             ScoreText.text = Score.ToString("000");
         }
 
@@ -52,7 +53,14 @@ public class GameManager : MonoBehaviour {
             SceneManager.LoadScene(0);
         }
     }
-
+    public void TickUpWhitePellets()
+    {
+        PelletsEaten = PelletsEaten + 3;
+    }
+    public void TickUpBluePellets()
+    {
+        PelletsEaten = PelletsEaten + 10;
+    }
     public void TickUpScore()
     {
         Score++;
