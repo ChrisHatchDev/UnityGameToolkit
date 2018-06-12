@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PhysicsBased: 0
-  MoveSpeed: {x: 0, y: 0, z: 16}
+  MoveSpeed: {x: 0, y: 0, z: 24}
 --- !u!114 &114163229026151818
 MonoBehaviour:
   m_ObjectHideFlags: 1
