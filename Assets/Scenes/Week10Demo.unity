@@ -518,12 +518,12 @@ Prefab:
     - target: {fileID: 114465404461749340, guid: 23072b7823432684cb712a4c78b887af,
         type: 2}
       propertyPath: SpawnOffsets.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114465404461749340, guid: 23072b7823432684cb712a4c78b887af,
         type: 2}
       propertyPath: PrefabsToSpawn.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4801464677432530, guid: 23072b7823432684cb712a4c78b887af, type: 2}
       propertyPath: m_LocalPosition.x
@@ -555,7 +555,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4801464677432530, guid: 23072b7823432684cb712a4c78b887af, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114465404461749340, guid: 23072b7823432684cb712a4c78b887af,
         type: 2}
@@ -566,7 +566,7 @@ Prefab:
         type: 2}
       propertyPath: PrefabsToSpawn.Array.data[0]
       value: 
-      objectReference: {fileID: 1173008743000892, guid: dee9d3102322b244eb48ab45d77d87cb,
+      objectReference: {fileID: 1173008743000892, guid: d6b54b1fff3a5504b91f233d24478f3d,
         type: 2}
     - target: {fileID: 114465404461749340, guid: 23072b7823432684cb712a4c78b887af,
         type: 2}
@@ -581,28 +581,28 @@ Prefab:
     - target: {fileID: 114465404461749340, guid: 23072b7823432684cb712a4c78b887af,
         type: 2}
       propertyPath: SpawnDelay
-      value: 0.75
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114465404461749340, guid: 23072b7823432684cb712a4c78b887af,
         type: 2}
       propertyPath: SpawnOffsets.Array.data[2].x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114465404461749340, guid: 23072b7823432684cb712a4c78b887af,
         type: 2}
       propertyPath: PrefabsToSpawn.Array.data[1]
       value: 
-      objectReference: {fileID: 1173008743000892, guid: d6b54b1fff3a5504b91f233d24478f3d,
+      objectReference: {fileID: 1173008743000892, guid: dee9d3102322b244eb48ab45d77d87cb,
         type: 2}
     - target: {fileID: 114465404461749340, guid: 23072b7823432684cb712a4c78b887af,
         type: 2}
       propertyPath: SpawnOffsets.Array.data[3].x
-      value: -1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114465404461749340, guid: 23072b7823432684cb712a4c78b887af,
         type: 2}
       propertyPath: SpawnOffsets.Array.data[3].y
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114465404461749340, guid: 23072b7823432684cb712a4c78b887af,
         type: 2}
@@ -622,7 +622,7 @@ Prefab:
     - target: {fileID: 114465404461749340, guid: 23072b7823432684cb712a4c78b887af,
         type: 2}
       propertyPath: SpeedUpEveryNSeconds
-      value: 30
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 114465404461749340, guid: 23072b7823432684cb712a4c78b887af,
         type: 2}
@@ -634,8 +634,7 @@ Prefab:
         type: 2}
       propertyPath: PrefabsToSpawn.Array.data[2]
       value: 
-      objectReference: {fileID: 1226195145118536, guid: 43238cb02ae265040a8a86b73b323cc0,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 114465404461749340, guid: 23072b7823432684cb712a4c78b887af,
         type: 2}
       propertyPath: PrefabsToSpawn.Array.data[3]
@@ -1004,7 +1003,7 @@ Transform:
   m_LocalScale: {x: 2.0673025, y: 1, z: 0.21893312}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1547798716
 GameObject:
@@ -1659,7 +1658,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -2114998608
+  randomSeed: -238629213
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -5060,7 +5059,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -2085028875
+  randomSeed: 258982377
   InitialModule:
     serializedVersion: 3
     enabled: 1
