@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class MoveObjectOverTime : MonoBehaviour {
 
+    public bool ShouldSpeedUpOverTime;
+    public float ObjectLifeSpawn = 5;
+    public float SpeedMultiplyer = 0.5f;
+
+
+
     [Tooltip("Requires a Rigidbody on this GameObject")]
     public bool PhysicsBased;
     private Rigidbody _rigid;
@@ -12,9 +18,26 @@ public class MoveObjectOverTime : MonoBehaviour {
     public Vector3 MoveSpeed;
 
 	void Start () {
-        if(PhysicsBased)
+
+        if (PhysicsBased)
             _rigid = GetComponent<Rigidbody>();
-	}
+
+        if (ShouldSpeedUpOverTime)
+        {
+            StartCoroutine(SpeedUp());
+        }
+
+    }
+
+    IEnumerator SpeedUp()
+    {
+        yield return new WaitForSeconds(ObjectLifeSpawn);
+
+        MoveSpeed = MoveSpeed * SpeedMultiplyer;
+
+        StartCoroutine(SpeedUp());
+    }
+
 	
 	void Update () {
 
