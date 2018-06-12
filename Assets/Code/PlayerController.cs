@@ -29,9 +29,34 @@ public class PlayerController : MonoBehaviour {
             {
                 MoveRight();
             }
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                MoveUp();
+            }
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                MoveDown();
+            }
         }
 
         HealthText.text = "Health " + Health.ToString();
+    }
+
+    void MoveUp()
+    {
+        int _movesUpward = (int)(transform.position.y / 1.1f);
+        //Debug.Log("Moves to the Right =" + _movesUpward);
+
+        if (_movesUpward < NumberOfLanes/3)
+            transform.position += new Vector3(0, LaneWidth, 0);
+    }
+
+    void MoveDown()
+    {
+        int _movesDownward = (int)(transform.position.y / 1.1f);
+
+        if (_movesDownward > -NumberOfLanes/3)
+            transform.position -= new Vector3(0, LaneWidth, 0);
     }
 
     void MoveLeft()
