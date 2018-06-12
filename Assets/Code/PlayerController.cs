@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour {
 
     public float LaneWidth = 1.1f;
+    public float LaneHeight = 2.1f;
     public int NumberOfLanes = 3;
 
     public int Health = 3;
@@ -29,6 +30,14 @@ public class PlayerController : MonoBehaviour {
             {
                 MoveRight();
             }
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                MoveUpward();
+            }
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                MoveDown();
+            }
         }
 
         HealthText.text = "Health " + Health.ToString();
@@ -43,6 +52,25 @@ public class PlayerController : MonoBehaviour {
             transform.position -= new Vector3(LaneWidth, 0, 0);
 
     }
+    void MoveUpward()
+    {
+        int _movesUpward = (int)(transform.position.y / 2.1f);
+
+
+        if (_movesUpward < +NumberOfLanes / 2)
+            transform.position += new Vector3(0, LaneHeight, 0);
+
+    }
+    void MoveDown()
+    {
+        int _movesDown = (int)(transform.position.y / 2.1f);
+
+
+        if (_movesDown > -NumberOfLanes / 2)
+            transform.position -= new Vector3(0, LaneHeight, 0);
+
+    }
+
 
     void MoveRight()
     {
@@ -52,6 +80,8 @@ public class PlayerController : MonoBehaviour {
         if (_movesToTheRight < NumberOfLanes/3)
             transform.position += new Vector3(LaneWidth, 0, 0);
     }
+
+    
 
     public void GotHit()
     {
