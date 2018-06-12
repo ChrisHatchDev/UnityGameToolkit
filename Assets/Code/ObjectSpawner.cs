@@ -27,7 +27,7 @@ public class ObjectSpawner : MonoBehaviour {
         yield return new WaitForSeconds(5);
         SpawnDelay -= .05f;
 
-        if (SpawnDelay > .025f)
+        if (SpawnDelay > .2f)
         {
             StartCoroutine(SpawnTimeProgression());
         }
