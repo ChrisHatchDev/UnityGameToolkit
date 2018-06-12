@@ -6,6 +6,7 @@ TagManager:
   tags:
   - WhitePellet
   - BluePellet
+  - Enemy
   layers:
   - Default
   - TransparentFX

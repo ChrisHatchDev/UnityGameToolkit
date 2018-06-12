@@ -8,9 +8,10 @@ public class GameManager : MonoBehaviour {
 
     public float Score = 0;
     public Text ScoreText;
+    public Text InvincibleText;
 
     public bool UseTimeAsScore;
-    public float TimeSurvived;
+    public float GhostsEaten;
     public float PelletsEaten;
 
     public bool CheckForWinOnUpdate;
@@ -21,15 +22,29 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         ScoreText.text = Score.ToString();
+        InvincibleText.text = "Invincible Time: " + PlayerControl.InvincibleTime;
+
 	}
 
-    private void Update()
+    public void Update()
     {
+        InvincibleText.text = "Invincible Time: " + PlayerControl.InvincibleTime;
+        if (PlayerControl.Invincible == true)
+        {
+            InvincibleText.gameObject.SetActive(true);     
+        }
+        
+        if (PlayerControl.Invincible == false)
+        {
+            InvincibleText.gameObject.SetActive(false);
+        }
+        
         if (UseTimeAsScore)
         {
-            TimeSurvived += Time.deltaTime;
-            Score = (TimeSurvived * 2) + PelletsEaten;
+            //TimeSurvived += Time.deltaTime;
+            Score = GhostsEaten + PelletsEaten;
             ScoreText.text = Score.ToString("000");
+            
         }
 
         if (CheckForWinOnUpdate)
@@ -63,7 +78,7 @@ public class GameManager : MonoBehaviour {
     }
     public void TickUpScore()
     {
-        Score++;
+        GhostsEaten = GhostsEaten + 30;
         ScoreText.text = Score.ToString();
     }
 

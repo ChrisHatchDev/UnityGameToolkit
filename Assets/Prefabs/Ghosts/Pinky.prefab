@@ -24,9 +24,10 @@ GameObject:
   - component: {fileID: 65911870805315596}
   - component: {fileID: 114156024954549160}
   - component: {fileID: 54323017801643112}
+  - component: {fileID: 114152013552501528}
   m_Layer: 0
   m_Name: Pinky
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,6 +72,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.24, y: 10.24, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114152013552501528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1714357733830878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da7bba5f3b2c47d4597d35c8ef6d7372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sprite1: {fileID: 21300000, guid: 1efd6a4fbd18555418ed90062d2d1763, type: 3}
+  Sprite2: {fileID: 21300000, guid: 1cebbd3b377ce904fb17ef8afc21ebea, type: 3}
+  spriteRenderer: {fileID: 212390111497101220}
+  PlayerControl: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!114 &114156024954549160
 MonoBehaviour:
   m_ObjectHideFlags: 1

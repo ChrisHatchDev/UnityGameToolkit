@@ -12,11 +12,16 @@ public class PlayerController : MonoBehaviour {
     public int Health = 3;
     public Text HealthText;
     public bool Invincible;
+    public float InvincibleTime;
+    public Animator anim;
+    public Vector3 Big;
+    public Vector3 Small;
 
     // Use this for initialization
     void Start () {
-		
-	}
+        InvincibleTime = 7;
+        anim = GetComponent<Animator>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -32,7 +37,18 @@ public class PlayerController : MonoBehaviour {
                 MoveRight();
             }
         }
-
+        if (Invincible == true)
+        {
+            InvincibleTime = 7;
+            anim.SetBool("Invincible", true);
+            transform.localScale = Big;
+            StartCoroutine(WakaWaka());
+        }
+        if (Invincible == false)
+        {
+            
+        }
+      
         HealthText.text = "Health " + Health.ToString();
     }
 
@@ -76,7 +92,7 @@ public class PlayerController : MonoBehaviour {
     }
     public void GotHit(Collision other)
     {
-        if(other.gameObject.tag != "WhitePellet" && other.gameObject.tag != "BluePellet" && Health > 0)
+        if(Invincible != true && other.gameObject.tag != "WhitePellet" && other.gameObject.tag != "BluePellet" && other.gameObject.tag == "Enemy" && Health > 0)
         {
             Health--;
         }
@@ -93,6 +109,13 @@ public class PlayerController : MonoBehaviour {
             Invincible = true;
             //Destroy(other.gameObject);
         }
+        if(Invincible == true)
+        {
+            Manager.TickUpScore();
+            Destroy(other.gameObject);
+            
+        }
+        
     }
     public void Waka()
     {
@@ -102,9 +125,26 @@ public class PlayerController : MonoBehaviour {
         }
         if (tag == "BluePellet")
         {
-            Manager.TickUpBluePellets();
+            Manager.TickUpBluePellets(); 
         }
     }
+    IEnumerator WakaWaka()
+    {
+        Manager.InvincibleText.text = "Invincible Time: " + InvincibleTime;
+        InvincibleTime = InvincibleTime - 1;
+        yield return new WaitForSeconds(1);
+        if (InvincibleTime > 0)
+        {
+            StartCoroutine(WakaWaka());
+        }
+        if (InvincibleTime == 0)
+        {
+            Debug.Log("WHOOOOOO");
+            yield return new WaitForSeconds(3);
+            Invincible = false;
+            anim.SetBool("Invincible", false);
+            StopAllCoroutines();
+        }
 
-    
+    }
 }

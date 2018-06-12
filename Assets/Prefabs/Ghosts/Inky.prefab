@@ -24,9 +24,10 @@ GameObject:
   - component: {fileID: 65519410698411388}
   - component: {fileID: 114062380477619824}
   - component: {fileID: 54797754310118486}
+  - component: {fileID: 114826498580363376}
   m_Layer: 0
   m_Name: Inky
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,6 +97,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyDelay: 15
+--- !u!114 &114826498580363376
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1183592304464530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da7bba5f3b2c47d4597d35c8ef6d7372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sprite1: {fileID: 21300000, guid: be27f538335c7e34c8c5cd78cffa4f60, type: 3}
+  Sprite2: {fileID: 21300000, guid: 1cebbd3b377ce904fb17ef8afc21ebea, type: 3}
+  spriteRenderer: {fileID: 212723029825205170}
+  PlayerControl: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!212 &212723029825205170
 SpriteRenderer:
   m_ObjectHideFlags: 1

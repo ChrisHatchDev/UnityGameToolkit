@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114652262390298808}
   m_Layer: 0
   m_Name: BLinky
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,6 +112,7 @@ MonoBehaviour:
   Sprite2: {fileID: 21300000, guid: 1cebbd3b377ce904fb17ef8afc21ebea, type: 3}
   spriteRenderer: {fileID: 212477395754482128}
   PlayerControl: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!212 &212477395754482128
 SpriteRenderer:
   m_ObjectHideFlags: 1
