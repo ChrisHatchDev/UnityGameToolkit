@@ -8,6 +8,7 @@ public class cubeScript : MonoBehaviour {
     public string ColorTag, PlayerTagREF, GameState;
     public Text OpisitesText, ScoreDude, Strikes;
     public int score, strikes;
+    public Canvas GameOver;
 
 	// Use this for initialization
 	void Start () {
@@ -65,7 +66,10 @@ public class cubeScript : MonoBehaviour {
 
         }
 
-
+        if (strikes >= 3)
+        {
+            GameOver.enabled = true;
+        }
     }
 
 

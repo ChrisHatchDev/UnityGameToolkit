@@ -19,6 +19,7 @@ public class EndCollison : MonoBehaviour {
 
         if (StrikesREF >= 3)
         {
+            Debug.Log("dude");
             EndGame.enabled = true;
 
         }
