@@ -18,7 +18,7 @@ public class PlayerControls : MonoBehaviour {
         Anim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
         if (Anim = null)
         {
-            Debug.Log("faggot fuck face!");
+            Debug.Log("Anim Is Null");
 
         }
         Debug.Log("dag on!!");
@@ -49,7 +49,7 @@ public class PlayerControls : MonoBehaviour {
                 Debug.Log("loser");
 
             
-                Debug.Log("pooser");
+
             }
 
 
@@ -68,11 +68,6 @@ public class PlayerControls : MonoBehaviour {
             Anim.SetTrigger("JumpingLeft");
 
 
-                Debug.Log("bitch");
-
-
-                Debug.Log("and hoe");
-            
         }
 
       

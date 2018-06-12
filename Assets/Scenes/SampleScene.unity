@@ -1293,6 +1293,11 @@ Prefab:
       propertyPath: CurrentMat
       value: 
       objectReference: {fileID: 2100000, guid: 387f05c997555514fa18451b5a734bc0, type: 2}
+    - target: {fileID: 114899608800970098, guid: ba9e4540111f0d54d969f480ca275778,
+        type: 2}
+      propertyPath: ColorReference
+      value: 
+      objectReference: {fileID: 2100000, guid: 8ef2a17396acfb0478255895bcaf22ef, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba9e4540111f0d54d969f480ca275778, type: 2}
   m_IsPrefabParent: 0
