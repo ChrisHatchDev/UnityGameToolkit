@@ -20,6 +20,10 @@ public class OnCollision : MonoBehaviour {
             if(OneTime)
                 _triggered = true;
         }
+        if (collision.gameObject.name == "player") 
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     private void OnCollisionStay(Collision collision)
