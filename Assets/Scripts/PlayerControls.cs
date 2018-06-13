@@ -23,7 +23,7 @@ public class PlayerControls : MonoBehaviour {
             Debug.Log("Anim Is Null");
 
         }
-        Debug.Log("dag on!!");
+
 	}
 
     // Update is called once per frame
@@ -48,7 +48,6 @@ public class PlayerControls : MonoBehaviour {
             Anim.SetTrigger("JumpingRight");
 
 
-                Debug.Log("loser");
 
             
 
