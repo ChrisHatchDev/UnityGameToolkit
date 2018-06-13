@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class cubeScript : MonoBehaviour {
     public Material BaseMat, Black, White;
@@ -16,12 +17,17 @@ public class cubeScript : MonoBehaviour {
         ColorTag = "White";
         StartCoroutine(ToWhite());
         StartCoroutine(Alike());
-
     }
 
     // Update is called once per frame
     void Update ()
     {
+        if (Input.GetKey(KeyCode.R))
+        {
+            SceneManager.LoadScene("SampleScene");
+
+        }
+
         ScoreDude.text = score.ToString();
         Strikes.text = strikes.ToString();
 
